@@ -235,6 +235,7 @@
   }
 
   function demoBar() {
+    if (DEMO && params.get('banner') === 'proto') return `<div class="demo-bar demo-bar--proto">${esc(CFG.notice || '試作版です')}</div>`;
     if (DEMO) return '<div class="demo-bar">デモ表示です。入力した内容はどこにも送信されません</div>';
     return CFG.notice ? `<div class="demo-bar demo-bar--proto">${esc(CFG.notice)}</div>` : '';
   }
